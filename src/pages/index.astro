@@ -8,12 +8,12 @@ import {mainContent, links, socialLinks} from '../links';
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Linked Up 🔗</title>
+		<title>Howie's World Wide Webpage</title>
     <style>
       body {
-        background-color: #212121;
+        background-color: #040404;
         color: #fff;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: sans-serif;
       }
       a {
         color: inherit;
@@ -31,11 +31,14 @@ import {mainContent, links, socialLinks} from '../links';
         align-items: center;
         /* justify-content: center; */
         min-height: 90vh;
-        padding: 10vh 1rem;
+        padding: 5vh 1rem;
       }
       .top__content {
         margin-bottom: 2rem;
         text-align: center;
+      }
+      p {
+        text-align: left;
       }
       .profile__img {
         border-radius: 50%;
@@ -86,9 +89,13 @@ import {mainContent, links, socialLinks} from '../links';
 	<body>
     <article class="main__article">
       <div class="top__content">
-        <img class="profile__img" width="128px" height="128px" src={mainContent.imgSrc} alt={`Profile image of ${mainContent.name}`} />
+        <img class="profile__img" width="256px" height="256px" src={mainContent.imgSrc} alt={`Profile image of ${mainContent.name}`} />
         <h1>{mainContent.name}</h1>
-        <p>{mainContent.tagline}</p>
+        <h2>{mainContent.tagline}</h2>
+        <p>{mainContent.bio1}</p>
+        <p>{mainContent.bio2}</p>
+        <p>{mainContent.bio3}</p>
+        <p>{mainContent.bio4}</p>
         <ul class="social-links__list">
           {socialLinks.map((link) => (
             <li class="social-links__link">
@@ -99,11 +106,11 @@ import {mainContent, links, socialLinks} from '../links';
           ))}
         </ul>
       </div>
-      <ul class="links__list">
+      <!--<ul class="links__list">
         {links.map(link => (
           <li class="links__link"><a href={link.url}>{link.text}</a></li>
         ))}
-      </ul>
+      </ul>-->
     </article>
 	</body>
 </html>

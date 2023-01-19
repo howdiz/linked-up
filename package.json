@@ -1,15 +1,23 @@
 {
-  "name": "@example/minimal",
-  "version": "0.0.1",
-  "private": true,
   "scripts": {
+    "edgio:dev": "edgio dev",
+    "edgio:build": "edgio build",
+    "edgio:deploy": "edgio deploy",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
+  "name": "howies_linktree",
+  "version": "0.0.1",
+  "private": true,
   "devDependencies": {
+    "@edgio/astro": "^6.0.6",
+    "@edgio/cli": "^6.0.6",
+    "@edgio/core": "^6.0.6",
+    "@edgio/devtools": "^6.0.6",
+    "@edgio/prefetch": "^6.0.6",
     "astro": "^1.0.5",
     "astro-icon": "^0.7.3"
   }
